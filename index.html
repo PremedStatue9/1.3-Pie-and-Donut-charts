@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 200px">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Pepperoni', 'Supreme', 'Cheese', 'Hawaiian', 'Meat', 'Veggie'],
+            datasets: [{
+                label: 'My First Doughnut Today',
+                data: [300, 50, 200, 100, 120, 70],
+                backgroundColor: [
+                    'rgb(255, 70, 50)',
+                    'rgb(68, 250, 85)',
+                    'rgb(255, 250, 50)',
+                    'rgb(255, 68, 112)',
+                    'rgb(200, 90, 10)',
+                    'rgb(40, 150, 40)'
+                ],
+                hoverOffset: 1
+            }]
+        }
+    });
+</script>
+<div style="width: 200px">
+    <canvas id="myChart2"></canvas>
+</div>
+<script>
+    var cty = document.getElementById('myChart2');
+    var myChart = new Chart(cty, {
+        type: 'pie',
+        data: {
+            labels: ['Phone', 'Laptop', 'Tablet', 'PC', 'Keyboard', 'Mouse'],
+            datasets: [{
+                label: 'My First Doughnut Today',
+                data: [100, 250, 150, 200, 90, 120],
+                backgroundColor: [
+                    'rgb(68, 64, 60)',
+                    'rgb(100, 113, 100)',
+                    'rgb(170, 130, 70)',
+                    'rgb(120, 180, 72)',
+                    'rgb(100, 160, 170)',
+                    'rgb(150, 100, 150)'
+                ],
+                hoverOffset: 1
+            }]
+        }
+    });
+</script>
+<div style="width: 200px">
+    <canvas id="myChart3"></canvas>
+</div>
+<script>
+    var ctz = document.getElementById('myChart3');
+    var myChart = new Chart(ctz, {
+        type: 'polarArea',
+        data: {
+            labels: [
+                'Apex', 'PUBG', 'Dota 2', 'Fortnite', 'Lost Ark', 'Minecraft', 'Roblox', 'League of Legends'
+            ],
+            datasets: [{
+                label: 'Polar Area Chart',
+                data: [41, 69, 78, 23, 32, 45, 65, 78],
+                backgroundColor: [
+                    'rgb(207, 10, 0)',
+                    'rgb(50, 190, 50)',
+                    'rgb(200, 100, 10)',
+                    'rgb(0, 198, 203)',
+                    'rgb(170, 46, 167)',
+                    'rgb(140, 70, 50)',
+                    'rgb(130, 140, 145)',
+                    'rgb(180, 255, 50)'
+                ]
+            }]
+        },
+    });
+</script>
+</body>
+</html>
